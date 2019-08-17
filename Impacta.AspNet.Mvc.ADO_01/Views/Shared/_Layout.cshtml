@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        @Html.ActionLink("Real BookStore", "Index", "Home", new { }, new { @class = "navbar-brand" })
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    @Html.ActionLink("Home", "Index", "Home", new { }, new { @class = "nav-link" })
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Tarefas</a>
+                    <div class="dropdown-menu">
+                        @Html.ActionLink("Listar tarefas", "ListarNovasTarefas", "Tarefa", new { }, new { @class = "dropdown-item" })
+                        <div class="dropdown-divider"></div>
+                        @Html.ActionLink("Adicionar nova tarefa", "Novatarefa", "Tarefa", new { }, new { @class = "dropdown-item" })
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Editoras</a>
+                    <div class="dropdown-menu">
+                        @Html.ActionLink("Editoras", "Index", "RealBooks", new { }, new { @class = "dropdown-item" })
+                        <div class="dropdown-divider"></div>
+                        @Html.ActionLink("Cadastrar Editora", "RegistraEditora", "RealBooks", new { }, new { @class = "dropdown-item" })
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="content">
+        @RenderBody()
+    </div>
+    <div class="row" style="margin-bottom: 25px;"></div>
+        <footer class="page-footer font-small mdb-color pt-4 " 
+                style="background-color: black; ">
+
+            <div class="container text-center text-md-left" style="color: white">
+                <div class="row text-center text-md-left mt-3 pb-3">
+                    <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold" style="color: white">REALBOOK STORE</h6>
+                        <p>
+                            Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
+                            consectetur
+                            adipisicing elit.
+                        </p>
+                    </div>
+                    <hr class="w-100 clearfix d-md-none">
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold" style="color: white">Products</h6>
+                        <p>
+                            MDBootstrap
+                        </p>
+                        <p>
+                            MDWordPress
+                        </p>
+                        <p>
+                            BrandFlow
+                        </p>
+                        <p>
+                            Bootstrap Angular
+                        </p>
+                    </div>
+                    <hr class="w-100 clearfix d-md-none">
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold" style="color: white">Useful links</h6>
+                        <p>
+                            Your Account
+                        </p>
+                        <p>
+                            Become an Affiliate
+                        </p>
+                        <p>
+                            Shipping Rates
+                        </p>
+                        <p>
+                            Help
+                        </p>
+                    </div>
+                    <hr class="w-100 clearfix d-md-none">
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold" style="color: white">Contato</h6>
+                        <p>
+                            <i class="fas fa-home mr-3"></i> São Paulo, SP 10012, BR
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope mr-3"></i> lucas.snovaes@outlook.com
+                        </p>
+                        <p>
+                            <i class="fas fa-phone mr-3"></i> (11) 9 7336 - 8447
+                        </p>
+                        <p>
+                            <i class="fas fa-print mr-3"></i> (11) 9 7336 - 8447
+                        </p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row d-flex align-items-center">
+                    <div class="col-md-7 col-lg-8">
+                        <p class="text-center text-md-left">
+                            &copy; @DateTime.Now.Year - Lucas Santana de Novaes
+                        </p>
+                    </div>
+                    <div class="col-md-5 col-lg-4 ml-lg-0">
+                        <div class="text-center text-md-right">
+                            <ul class="list-unstyled list-inline">
+                                <li class="list-inline-item">
+                                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                                        <i class="fab fa-google-plus-g"></i>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+</body>
+</html>

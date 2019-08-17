@@ -1,0 +1,73 @@
+﻿@model IEnumerable<Impacta.AspNet.Mvc.MOD.TarefaMOD>
+
+@{
+    ViewBag.Title = "Lista de tarefas";
+}
+
+<div class="container-fluid">
+    <h2>Lista de tarefas</h2>
+
+    <p>
+        @Html.ActionLink("+Nova Tarefa", "NovaTarefa")
+    </p>
+
+    @if (ViewBag.Alerta != null)
+    {
+        <div class="alert alert-dismissible alert-primary">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <a href="#" class="alert-link"></a> @ViewBag.Alerta.
+        </div>
+    }
+    else
+    {
+        if (ViewBag.Message != null)
+        {
+            <div class="alert alert-dismissible alert-primary">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <a href="#" class="alert-link"></a> @ViewBag.Message.
+            </div>
+        }
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Prioridade)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Concluido)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Observacao)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Prioridade)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Concluido)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Observacao)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Editar", "Edit", new { id = item.Id }, new { @class = "btn btn-primary" }) |
+                        @Html.ActionLink("Detalhes", "Details", new { id = item.Id }, new { @class = "btn btn-success" }) |
+                        @Html.ActionLink("Deletar", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+                    </td>
+                </tr>
+            }
+        </table>
+    }
+
+
+</div>
