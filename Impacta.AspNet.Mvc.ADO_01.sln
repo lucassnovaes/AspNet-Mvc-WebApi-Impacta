@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Impacta.AspNet.Mvc.EFTests"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Impacta.Tarefas.WebApi", "Impacta.Tarefas.WebApi\Impacta.Tarefas.WebApi.csproj", "{5AECD475-E2B0-427C-83E7-D01F57C3ED65}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Impacta.Client.Api", "Impacta.Client.Api\Impacta.Client.Api.csproj", "{FB061696-9F31-4961-B4E6-C6DF7535BEBD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{5AECD475-E2B0-427C-83E7-D01F57C3ED65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AECD475-E2B0-427C-83E7-D01F57C3ED65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5AECD475-E2B0-427C-83E7-D01F57C3ED65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB061696-9F31-4961-B4E6-C6DF7535BEBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB061696-9F31-4961-B4E6-C6DF7535BEBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB061696-9F31-4961-B4E6-C6DF7535BEBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB061696-9F31-4961-B4E6-C6DF7535BEBD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
