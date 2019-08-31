@@ -22,7 +22,7 @@ namespace Impacta.AspNet.Mvc.ADO_01.Controllers
 				if(usuario.Username.Equals("lucas.santana") && usuario.Password.Equals("lucas123"))
 				{
 					Session["Usuario"] = usuario;
-					return RedirectToAction("Index", "RealBooks");
+					return RedirectToAction("Index", "Home");
 				}
 				else
 				{

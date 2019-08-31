@@ -8,7 +8,8 @@ using System.Web.Mvc;
 
 namespace Impacta.AspNet.Mvc.ADO_01.Controllers
 {
-    public class RealBooksController : Controller
+	[Authorize]
+	public class RealBooksController : Controller
     {
         // GET: RealBooks
         public ActionResult Index()

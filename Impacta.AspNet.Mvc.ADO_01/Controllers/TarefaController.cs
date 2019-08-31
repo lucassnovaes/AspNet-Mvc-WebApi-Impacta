@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace Impacta.AspNet.Mvc.ADO_01.Controllers
 {
+	[Authorize]
 	public class TarefaController : Controller
 	{
 		public ActionResult Index()

@@ -36,7 +36,16 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    @if ((Impacta.AspNet.Mvc.MOD.Usuario)HttpContext.Current.Session["Usuario"] != null)
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        @Html.ActionLink(string.Format("Bem vindo: {0} | Clique aqui para fazer Logout",User.Identity.Name.ToString()),
+                                        "Logout","Login", new { }, new { @class = "nav-link dropdown-toggle" })
+                    }
+                    else
+                    {
+                        @Html.ActionLink("Login", "Autenticacao", "Login", new { }, new { @class = "nav-link dropdown-toggle" })
+                    }
+                    @*@if ((Impacta.AspNet.Mvc.MOD.Usuario)HttpContext.Current.Session["Usuario"] != null)
                     {
                             @Html.ActionLink("Bem vindo: " + ((HttpContext.Current.Session["Usuario"]
                            as Impacta.AspNet.Mvc.MOD.Usuario).Username.ToUpper())
@@ -46,7 +55,7 @@
                     else
                     {
                         @Html.ActionLink("Login", "Entrar","Autenticador", new { }, new { @class= "nav-link dropdown-toggle" })
-                    }
+                    }*@
                 </li>
             </ul>
         </div>

@@ -19,13 +19,13 @@ namespace Impacta.AspNet.Mvc.ADO_01.Controllers
 		public ActionResult AutenticacaoLogin(Usuario usuario)
 		{
 			FormsAuthentication.SetAuthCookie(usuario.Username,false);
-			return RedirectToAction("Index", "RealBooks");
+			return RedirectToAction("Index", "Home");
 			
 		}
 		public ActionResult Logout()
 		{
 			FormsAuthentication.SignOut();
-			return View("Autenticacao");
+			return RedirectToAction("Autenticacao");
 		}
 
 	}
